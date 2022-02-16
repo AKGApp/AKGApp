@@ -1,0 +1,119 @@
+{
+  "project_info": {
+    "project_number": "809337330111",
+    "firebase_url": "https://akgapp-481de-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "akgapp-481de",
+    "storage_bucket": "akgapp-481de.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809337330111:android:1d2697d364a47a05b4290a",
+        "android_client_info": {
+          "package_name": "com.AKGApp.AKGAppMVPGames"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCQCciZyeZqE3phSX70Etbl4meDkm9-xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809337330111-v9svda8e39tlm9oi6f4utmc4cfl2k69k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.akgapp.akgapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809337330111:android:27c49698f50d6b0eb4290a",
+        "android_client_info": {
+          "package_name": "com.akgapp.akgapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCQCciZyeZqE3phSX70Etbl4meDkm9-xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809337330111-v9svda8e39tlm9oi6f4utmc4cfl2k69k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.akgapp.akgapp"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:809337330111:android:d859bec0f1d6f4acb4290a",
+        "android_client_info": {
+          "package_name": "com.example.akgapp_companion_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCQCciZyeZqE3phSX70Etbl4meDkm9-xs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "809337330111-5jd5iq26n27qtmciv29sg26d81oihelt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "809337330111-v9svda8e39tlm9oi6f4utmc4cfl2k69k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.akgapp.akgapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 3a9b009e6e1136d499f162d668155e01
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Noto Sans Arabic
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 2efe0d879d01caf4cad70d81b1a1f5e4, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
