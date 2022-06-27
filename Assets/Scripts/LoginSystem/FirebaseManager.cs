@@ -137,6 +137,8 @@ public class FirebaseManager : MonoBehaviour
     // Execute this code when the system starts "Awake"
     #endregion
     #region Validators for the game
+
+    
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
@@ -1056,4 +1058,5 @@ public class FirebaseManager : MonoBehaviour
     {
         StartCoroutine(CheckIfUserHasKids(user));
     }
+
 }
