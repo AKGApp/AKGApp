@@ -159,7 +159,9 @@ public class FirebaseManager : MonoBehaviour
     {
         //? Code that executes to check if player loaded a new level (aka "Scene")
         //? Not sure why I added it here
+        //! Delete the code below
         SceneManager.activeSceneChanged += ChangedToAnotherScene;
+        //* Check and fix firebase issues
         StartCoroutine(CheckAndFixDependencies());
         userChildren = new List<ChildInfortmationDataClass>();
 
