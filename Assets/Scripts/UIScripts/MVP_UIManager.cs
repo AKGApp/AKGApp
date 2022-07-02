@@ -44,6 +44,7 @@ public class MVP_UIManager : MonoBehaviour
     private GameObject childAddedSuccessfullyMessageScreen; // spelling error in word successfully
 
     [Space(10f)]
+    [SerializeField]
     private GameObject userEntryScreen; // spelling error in the word Entry
     [SerializeField]
     private GameObject gameMenuScreen;
