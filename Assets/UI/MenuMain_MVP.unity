@@ -1041,18 +1041,18 @@ MonoBehaviour:
   gameTitleScreen: {fileID: 881146960}
   signInScreen: {fileID: 918341261}
   signUpScreens: {fileID: 124248873}
-  welcomeMessageScreen: {fileID: 0}
-  addUserInfoScreen: {fileID: 0}
-  chooseGuardianRoleScreen: {fileID: 0}
-  userAdditionalInfoScreen: {fileID: 0}
-  setYourGuardianPasswordScreen: {fileID: 0}
-  letsAddYourKidsScreen: {fileID: 0}
-  addChildrenScreens: {fileID: 0}
-  addChildrenScreen: {fileID: 0}
-  yourChildInformationScreen: {fileID: 0}
-  childAddedSuccessfullyMessageScreen: {fileID: 0}
-  userEntryScreen: {fileID: 0}
-  gameMenuScreen: {fileID: 0}
+  welcomeMessageScreen: {fileID: 1542113952}
+  addUserInfoScreen: {fileID: 1509475993}
+  chooseGuardianRoleScreen: {fileID: 289066898}
+  userAdditionalInfoScreen: {fileID: 529407099}
+  setYourGuardianPasswordScreen: {fileID: 602700169}
+  letsAddYourKidsScreen: {fileID: 2096002595}
+  addChildrenScreens: {fileID: 1949450616}
+  addChildrenScreen: {fileID: 1075299796}
+  yourChildInformationScreen: {fileID: 64243066}
+  childAddedSuccessfullyMessageScreen: {fileID: 965769478}
+  userEntryScreen: {fileID: 244333850}
+  gameMenuScreen: {fileID: 2097082417}
 --- !u!1 &124248873
 GameObject:
   m_ObjectHideFlags: 0
@@ -1674,7 +1674,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &243796683
@@ -13834,7 +13834,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 200, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1647261117
