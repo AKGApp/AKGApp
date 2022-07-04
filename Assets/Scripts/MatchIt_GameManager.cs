@@ -5,170 +5,54 @@ using UnityEngine.UI;
 using TMPro;
 using System;
 
-public class MatchItGameManager : MonoBehaviour
+public class MatchIt_MatchItGameManager : MonoBehaviour
 {
+    // Add a way to determine the difficulty of the level
     public enum levelOfDifficulty { Level1, Level2, Level3, Level4, Level5 };
-    [Header("Game Settings")]
-    public levelOfDifficulty _levelOfDifficulty;
-    public bool _isGameTimed;
-    public float _gameTime = 10.0f, _distanceToMatch = 30.0f;
-    public int _numberOfItems, _numberOfItemsToMatch;
-    [Header("Gameplay Reffrences")]
-    public CountDownTimer _timerScript;
-    public GameObject _slotsLayoutGroup;
-    public GameObject _winUIScreen;
-    public GameObject _loseGameScreen;
-    public GameObject _quiteGameScreen;
-    public GameObject _itemsToMatchPanel;
-    public TMP_Text _scoreBoard;
-
-    [Header("Game Items")]
-    public MatchItItem[] _matchItItems;
-    public MatchItSlot[] _matchItSlots;
-    private GridLayoutGroup _gridLayoutGroup;
+    // Define the Level of difficulty enumerator
+    public levelOfDifficulty setupDifficulty = levelOfDifficulty.Level1;
+    // Varaible to specify distance to match items
+    private float _distanceToMatch;
+    // Specifiy the number of items in the item slots and items options to match in the game
+    private int _numberOfItemsInMatchSlot, _numberOfItemsToMatchinOptions;                   
+    // desc itemsInMatchSlot the layout group that contains all item patterns to be matched
+    // desc itemsToMatchPanel a panel that contains all the options of the items to be matched in the slot group 
+    public GameObject matchItItemsSlotGroup, itemsToMatchPanel;
+    // The items that will be in the items to match panel
+    private MatchItItem[] _matchItItems;
+    // The items that will be in the Items Slot Group
+    private MatchItSlot[] _matchItSlots;
+    // A varaible that registers the dropped location of the item that is currently selected and dragged
     private Vector2 _selectedMatchItemDroppedLocation;
-    private int _itemsMatched = 0;
 
-    private void MatchItItemsRandomizer(int NumberOfItems)
-    {
-        // create class the matches the Item infromation list
-        return;
-    }
-    private void Awake()
-    {
-        GameSetup(_levelOfDifficulty, _timerScript);
-        MatchItItemsRandomizer(_numberOfItems);
-        //! Score not updated
-        _scoreBoard.text = SetScore(_numberOfItemsToMatch, _itemsMatched);
-        //* add the ranmoziser function here
+    public CountDownTimer gameTimer;
+
+    // TODO: Create an item randomizer method
+    // This creates a random item each time a game starts
+
+    // TODO: setup the game based on awake based on the the difficuulty setting
+    // Salmeen
+    private void Awake() {
+        GameSetup(setupDifficulty);  
     }
 
-    // TODO: Create the randomizer function for the game
-    //* takes a prefab and pupulates it from a list based on the naming convetion.
-    //* naming convention goes like this "Color Type Catagory Name"
-    //* naming convetion function extracts the needed variables and popluates them in the Item information
-
-    // Function to check whether the dropped item is matched based on the distance of the object
-    public void DroppedItem()
+    // TODO: Method that takes the difficulty settings and applies the right options to it
+    // Abdulmohsen
+    private void GameSetup(levelOfDifficulty _levelOfDifficulty)
     {
-        Debug.Log("Plop");
-        foreach (MatchItItem i in _matchItItems)
+        // if condition
+        // switch statment
+        if (_levelOfDifficulty==levelOfDifficulty.Level1)
         {
-            foreach (MatchItSlot s in _matchItSlots)
+            // setup the game variables
+        }
+        switch (_levelOfDifficulty)
+        {
+            case levelOfDifficulty.Level1:
             {
-                // Debug.Log(i.GetComponent<MatchItInformation>().itemName.ToString());
-                if (i.GetComponent<MatchItInformation>().itemName.ToString() == s.GetComponent<MatchItInformation>().itemName.ToString())
-                {
-                    float _distance = Vector3.Distance(i.transform.position, s.transform.position);
-                    Debug.Log(i.transform.position);
-                    Debug.Log(s.transform.position);
-                    Debug.Log(_distance);
-                    if (_distance <= _distanceToMatch)
-                    {
-                        Debug.Log("Pleep");
-                        Debug.Log("Matched");
-                        //TODO: Play win sound
-                        s.GetComponent<Image>().sprite = i.GetComponent<Image>().sprite;
-                        s.GetComponent<Image>().color = i.GetComponent<Image>().color;
-                        i._isMatched = true;
-                        s._isMatched = true;
-                    }
-                }
+                // setup the game varaibles
+                break;
             }
-        }
-        _scoreBoard.text = SetScore(_numberOfItemsToMatch, _itemsMatched);
-        if (Array.TrueForAll(_matchItSlots, CheckIfAllItemsMatched))
-        {
-            StopTimer(ref _timerScript);
-            FirebaseManager.instance.StartCoroutine(FirebaseManager.instance.UpdateMatchItPerfomance("Match It", _levelOfDifficulty.ToString(), "Mohammad", DateTime.Now.ToString(), DateTime.Now.ToString(), "Location", 0.82f, 1));
-            Invoke("EnableWinningScreen", 1.0f);
-        }
-    }
-    private string SetScore(int NumberOfItemsToMatch, int ItemsMatched)
-    {
-        string newScore = ItemsMatched.ToString() + "/" + NumberOfItemsToMatch.ToString();
-        Debug.Log(newScore);
-        return newScore;
-    }
-    private static bool CheckIfAllItemsMatched(MatchItSlot value)
-    {
-        return value._isMatched;
-        throw new NotImplementedException();
-    }
-    public static void StopTimer(ref CountDownTimer  Timer)
-    {
-        Timer.isTimerPaused=true;
-    }
-
-    private void EnableWinningScreen()
-    {
-        _timerScript.isTimerPaused = true;
-        _winUIScreen.SetActive(true);
-    }
-
-    // Editing of the code below warrents the fury of the orginal developer, if you occur his wrath you will lose fingers
-    private void GameSetup(levelOfDifficulty SetupDifficulty, CountDownTimer Timer)
-    {
-        _gridLayoutGroup = _slotsLayoutGroup.GetComponent<GridLayoutGroup>();
-        if (SetupDifficulty == levelOfDifficulty.Level1)
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _isGameTimed = false;
-            Timer.isTimerActive = _isGameTimed;
-            _gameTime = 999.0f;
-            _distanceToMatch = 30.0f;
-            Timer.timerValue = _gameTime;
-            _numberOfItems = 4;
-            _numberOfItemsToMatch = 1;
-            _gridLayoutGroup.constraintCount = 2;
-        }
-        if (SetupDifficulty == levelOfDifficulty.Level2)
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _isGameTimed = true;
-            Timer.isTimerActive = _isGameTimed;
-            _gameTime = 180.0f;
-            _distanceToMatch = 30.0f;
-            Timer.timerValue = _gameTime;
-            _numberOfItems = 6;
-            _numberOfItemsToMatch = 2;
-            _gridLayoutGroup.constraintCount = 3;
-        }
-        if (SetupDifficulty == levelOfDifficulty.Level3)
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _isGameTimed = true;
-            Timer.isTimerActive = _isGameTimed;
-            _gameTime = 120.0f;
-            _distanceToMatch = 30.0f;
-            Timer.timerValue = _gameTime;
-            _numberOfItems = 6;
-            _numberOfItemsToMatch = 3;
-            _gridLayoutGroup.constraintCount = 3;
-        }
-        if (SetupDifficulty == levelOfDifficulty.Level4)
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _isGameTimed = true;
-            Timer.isTimerActive = _isGameTimed;
-            _gameTime = 180.0f;
-            _distanceToMatch = 30.0f;
-            Timer.timerValue = _gameTime;
-            _numberOfItems = 8;
-            _numberOfItemsToMatch = 4;
-            _gridLayoutGroup.constraintCount = 4;
-        }
-        if (SetupDifficulty == levelOfDifficulty.Level5)
-        {
-            _gridLayoutGroup.constraint = GridLayoutGroup.Constraint.FixedColumnCount;
-            _isGameTimed = true;
-            Timer.isTimerActive = _isGameTimed;
-            _gameTime = 120f;
-            _distanceToMatch = 30.0f;
-            Timer.timerValue = _gameTime;
-            _numberOfItems = 12;
-            _numberOfItemsToMatch = 4;
-            _gridLayoutGroup.constraintCount = 4;
         }
     }
 }
