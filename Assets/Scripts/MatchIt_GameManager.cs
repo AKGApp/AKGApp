@@ -33,66 +33,66 @@ public class MatchIt_MatchItGameManager : MonoBehaviour
     // TODO: setup the game based on awake based on the the difficuulty setting
     // Salmeen
     private void Awake() {
-        GameSetup(setupDifficulty);  
+        // GameSetup(setupDifficulty);  
     }
 
     // TODO: Method that takes the difficulty settings and applies the right options to it
     // Abdulmohsen
 
-    private void GameSetup(levelOfDifficulty _levelOfDifficulty)
-    {
+    // private void GameSetup(levelOfDifficulty _levelOfDifficulty)
+    // {
         
-        // if condition
-        // switch statment
-        if (_levelOfDifficulty==levelOfDifficulty.Level1)
-        {
-            glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
-            isGameTimed= false;
-            gameTime= 1f;
-            gridColumn=2;
-            glgl.constraintCount=gridColumn;
+    //     // if condition
+    //     // switch statment
+    //     if (_levelOfDifficulty==levelOfDifficulty.Level1)
+    //     {
+    //         glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
+    //         isGameTimed= false;
+    //         gameTime= 1f;
+    //         gridColumn=2;
+    //         glgl.constraintCount=gridColumn;
 
-            // setup the game variables
-        }
-        if(_levelOfDifficulty==levelOfDifficulty.Level2)
-        {
-            glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
-            isGameTimed=true;
-            gameTime=180f;
-            gridColumn=2;
-            glgl.constraintCount=gridColumn;
-        }
-        if(_levelOfDifficulty==levelOfDifficulty.Level3)
-        {
-            glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
-            isGameTimed=true;
-            gameTime=180f;
-            gridColumn=3;
-            glgl.constraintCount=gridColumn;
-        }
-        if(_levelOfDifficulty==levelOfDifficulty.Level4)
-        {
-            glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
-            isGameTimed=true;
-            gameTime=180f;
-            gridColumn=4;
-            glgl.constraintCount=gridColumn;
-        }
-        if(_levelOfDifficulty==levelOfDifficulty.Level5)
-        {
-           glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
-           isGameTimed=true;
-           gameTime=120f;
-           gridColumn=4;
-           glgl.constraintCount=gridColumn;
-        }
-        /*switch (_levelOfDifficulty)
-        {
-            case levelOfDifficulty.Level1:
-            {
-                // setup the game varaibles
-                break;
-            }*/
-        }
-    }
-//}
+    //         // setup the game variables
+    //     }
+    //     if(_levelOfDifficulty==levelOfDifficulty.Level2)
+    //     {
+    //         glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
+    //         isGameTimed=true;
+    //         gameTime=180f;
+    //         gridColumn=2;
+    //         glgl.constraintCount=gridColumn;
+    //     }
+    //     if(_levelOfDifficulty==levelOfDifficulty.Level3)
+    //     {
+    //         glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
+    //         isGameTimed=true;
+    //         gameTime=180f;
+    //         gridColumn=3;
+    //         glgl.constraintCount=gridColumn;
+    //     }
+    //     if(_levelOfDifficulty==levelOfDifficulty.Level4)
+    //     {
+    //         glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
+    //         isGameTimed=true;
+    //         gameTime=180f;
+    //         gridColumn=4;
+    //         glgl.constraintCount=gridColumn;
+    //     }
+    //     if(_levelOfDifficulty==levelOfDifficulty.Level5)
+    //     {
+    //        glgl.constraint = GridLayOutGroup.Constraint.FixedColumnCount;
+    //        isGameTimed=true;
+    //        gameTime=120f;
+    //        gridColumn=4;
+    //        glgl.constraintCount=gridColumn;
+    //     }
+    //     /*switch (_levelOfDifficulty)
+    //     {
+    //         case levelOfDifficulty.Level1:
+    //         {
+    //             // setup the game varaibles
+    //             break;
+    //         }*/
+    //     }
+    // }
+}
