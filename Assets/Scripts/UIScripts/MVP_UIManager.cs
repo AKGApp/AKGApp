@@ -7,11 +7,11 @@ public class MVP_UIManager : MonoBehaviour
     //TODO: Create the Constant instance
     public static MVP_UIManager instance;
     [SerializeField]
-    private enum language {Arabic, English};
+    public enum language {Arabic, English};
 
     [Header("System Settings")]
     [SerializeField]
-    private language systemLanguage=language.Arabiic;
+    public language systemLanguage = language.Arabic;
     //TODO: Add the public Pages and Scenes List
     //* All first letters are capital in game reference
     [Header("Welcome & SignIn")]
@@ -54,13 +54,15 @@ public class MVP_UIManager : MonoBehaviour
     [SerializeField]
     private GameObject gameMenuScreen;
 
+    private language SystemLanguage { get => systemLanguage; set => systemLanguage = value; }
+
 
 
 
 
 
     //TODO: Add the UI componenets Needed
-    
+
 
 
 
